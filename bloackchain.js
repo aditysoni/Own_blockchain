@@ -32,6 +32,24 @@ class Block
      
 
     }
+    
+     // proof of work 
+   // the more the difficulty the more will be the zeros 
+
+    mine(difficulty) 
+    {
+        
+        while(!this.hash.startsWith(Array (difficulty + 1 ) .join("0")));
+        // will work until the given hash is equal 
+        {
+        this.nonce ++ ; 
+
+        this.hash = this.getHash() ;
+        }
+    }
+     
+}
+
      
 }
 
